@@ -1,0 +1,49 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+	// Configure container
+	"name": "ROS2-Application",
+	"build": {
+		"context": "..",
+		"dockerfile": "Dockerfile"
+	},
+
+	// Configure container user
+	"remoteUser": "ubuntu",
+
+	// Configure workspace mount point
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/ubuntu/workspace,type=bind,consistency=cached",
+	"workspaceFolder": "/home/ubuntu/workspace",
+
+	// Configure runtime settings
+	"runArgs": [
+		"--network=host",
+		"--runtime=nvidia",
+		"--gpus", "all",
+		"-e", "ACCEPT_EULA=Y",
+		"-e", "PRIVACY_CONSENT=Y",
+		"-v", "${env:HOME}/docker/isaac-sim/cache/kit:/isaac-sim/kit/cache:rw",
+		"-v", "${env:HOME}/docker/isaac-sim/cache/ov:/root/.cache/ov:rw",
+		"-v", "${env:HOME}/docker/isaac-sim/cache/pip:/root/.cache/pip:rw",
+		"-v", "${env:HOME}/docker/isaac-sim/cache/glcache:/root/.cache/nvidia/GLCache:rw",
+		"-v", "${env:HOME}/docker/isaac-sim/cache/computecache:/root/.nv/ComputeCache:rw",
+		"-v", "${env:HOME}/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw",
+		"-v", "${env:HOME}/docker/isaac-sim/data:/root/.local/share/ov/data:rw",
+		"-v", "${env:HOME}/docker/isaac-sim/documents:/root/Documents:rw"
+	],
+
+	// Configure VS Code extensions
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cmake-tools",
+				"llvm-vs-code-extensions.vscode-clangd",
+				"xaver.clang-format",
+				"ms-python.python",
+				"donjayamanne.python-extension-pack",
+				"donjayamanne.python-environment-manager",
+				"ms-azuretools.vscode-docker",
+				"ms-python.autopep8"
+			]
+		}
+	}
+}
