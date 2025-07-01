@@ -8,6 +8,12 @@
             "type": "shell",
             "command": "sudo /isaac-sim/runheadless.native.sh -v",
             "problemMatcher": []
-        }
+        },
+        {
+            "label": "isaac-sim-webrtc",
+            "type": "shell",
+            "command": "sudo /isaac-sim/runheadless.webrtc.sh -v",
+            "problemMatcher": []
+        } 
     ]
 }
