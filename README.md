@@ -121,5 +121,3 @@ You can now:
 
 ## Ready to simulate!
 You now have a **portable Isaac Sim + ROS 2 environment** fully integrated with the Hokuyo robot for fast robotics development, testing, and simulation workflows without local clutter.
-
-If you encounter issues or need enhancements (WebRTC streaming, headless deployment scripts), feel free to open an issue or contact the maintainer.
