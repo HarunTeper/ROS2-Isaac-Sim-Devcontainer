@@ -30,7 +30,9 @@
 		"-v", "${env:HOME}/docker/isaac-sim/data:/root/.local/share/ov/data:rw",
 		"-v", "${env:HOME}/docker/isaac-sim/documents:/root/Documents:rw"
 	],
-
+	"mounts": [
+		"source=${localWorkspaceFolder}/hokuyo.json,target=/isaac-sim/exts/isaacsim.sensors.rtx/data/lidar_configs/hokuyo.json,type=bind,consistency=cached"
+	],
 	// Configure VS Code extensions
 	"customizations": {
 		"vscode": {
