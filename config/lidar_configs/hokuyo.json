@@ -1,0 +1,39 @@
+{
+  "class": "sensor",
+  "type": "lidar",
+  "name": "hokuyo",
+  "driveWorksId": "hokuyo_ust_10lx",
+  "profile": {
+    "scanType": "rotary",
+    "nearRangeM": 0.2,
+    "farRangeM": 30.0,
+    "rangeResolutionM": 0.004,
+    "rangeAccuracyM": 0.04,
+    "rotationDirection": "CW",
+    "wavelengthNm": 905,
+    "maxReturns": 2,
+    "reportRateBaseHz": 10800,
+    "numberOfEmitters": 1,
+    "scanRateBaseHz": 10,
+
+    "avgPowerW": 1.8,
+    "pulseTimeNs": 10,
+    "validStartAzimuthDeg": -135.0,
+    "validEndAzimuthDeg": 135.0,
+    "minReflectance": 10,
+    "minReflectanceRange": 4,
+    "intensityProcessing": "DEFAULT",
+    "rayType": "IDEALIZED",
+    "intensityMappingType": "LINEAR",
+
+    "emitterStateCount" : 1,
+
+    "emitterStates": [
+      {
+        "azimuthDeg": [0],
+        "elevationDeg": [0],
+        "fireTimeNs": [0]
+      }
+    ]
+  }
+}
